@@ -20,5 +20,20 @@ namespace Login
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string mailTxt = mail.Text;
+            string passeTxt = passe.Text;
+
+            if (mailTxt == "admin" && passeTxt == "admin")
+            {
+                MessageBox.Show("Connexion OK !");
+            }
+            else
+            {
+                MessageBox.Show("Erreur de connexion !", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

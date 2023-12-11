@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login"
         mc:Ignorable="d"
-        Title="App Login" Height="450" Width="350">
+        Title="App Login" Height="450" Width="500" ResizeMode="NoResize">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Fill="#FF0061FF" />
+        <Label Content="LOGIN" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
+               FontSize="36" FontWeight="Bold" FontFamily="Yu Gothic UI Semilight" Foreground="White"/>
+        <Image Grid.Column="0" Grid.Row="1" Source="/googleLOGO.png" Margin="5 0"/>
+        <Image Grid.Column="1" Grid.Row="1" Source="/facebookLOGO.png" Margin="5 0"/>
+
+        <Label Content="Votre adresse email : " Grid.Column="0" Grid.Row="2" FontSize="16" FontFamily="Candara"  />
+        <TextBox x:Name="mail" Text="jean.michel@gmail.com" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" TextWrapping="Wrap" Margin="10,30,10,10" FontSize="14" FontFamily="Candara">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Setter Property="Text" Value=""/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter Property="Foreground" Value="Gray"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <Label Content=" Votre mot de passe : " Grid.Column="0" Grid.Row="3" FontSize="16" FontFamily="Candara"  />
+        <TextBox x:Name="passe" Text="Azerty123!" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" Margin="10,30,10,10" FontSize="14" FontFamily="Candara" >
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Setter Property="Text" Value=""/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter Property="Foreground" Value="Gray"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <Button Content="Valider" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="150 15" Background="#FF0061FF" Foreground="White" FontSize="22" Click="Button_Click"/>
+        <Label Content="Mot de passe oublié ?" Grid.Column="1" Grid.Row="5" Foreground="#FF0061FF" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="10" />
 
     </Grid>
 </Window>

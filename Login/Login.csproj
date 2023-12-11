@@ -8,4 +8,20 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="facebookIMG.jpg" />
+    <None Remove="facebookLOGO.png" />
+    <None Remove="googleIMG.png" />
+    <None Remove="googleLOGO.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="facebookLOGO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="googleLOGO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
