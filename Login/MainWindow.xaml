@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="350">
+        Title="App Login" Height="450" Width="350">
     <Grid>
 
     </Grid>
